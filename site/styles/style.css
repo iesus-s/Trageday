@@ -1,0 +1,110 @@
+/* Ensure that the body and html take up the full height of the page */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Use Flexbox to center the content */
+
+body {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Start from the top */
+    flex-direction: column;
+    /* Stack content vertically */
+    text-align: center;
+    background-color: black;
+    min-height: 100vh;
+    /* Ensure body takes the full viewport height */
+}
+
+
+/* Styling for the title */
+
+.main_title {
+    color: white;
+    text-shadow: 0 4px 8px black;
+    font-size: 2vw;
+    white-space: nowrap;
+    /* Add some space from the top */
+    margin-bottom: 20px;
+    /* Add space between title and container */
+}
+
+
+/* Styling for the content container */
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    max-width: 600px;
+    width: 100%;
+    margin: 10px;
+}
+
+
+/* Styling for the h2 */
+
+h2 {
+    margin-top: 0;
+    color: black;
+}
+
+
+/* Styling for paragraphs */
+
+p {
+    color: black;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+/* Styling for strong elements (titles within paragraphs) */
+
+strong {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Responsive Design: Adjust layout and text size on smaller screens */
+
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+    .container {
+        padding: 15px;
+        max-width: 90%;
+    }
+    strong {
+        font-size: 18px;
+    }
+}
+
+
+/* For mobile devices */
+
+@media (max-width: 480px) {
+    p {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    strong {
+        font-size: 16px;
+    }
+}
