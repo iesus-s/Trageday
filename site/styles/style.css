@@ -13,16 +13,15 @@ body {
 
 body {
     display: flex;
-    justify-content: center;
-    /* Horizontally center */
     align-items: center;
-    /* Start from the top */
     flex-direction: column;
-    /* Stack content vertically */
     text-align: center;
     background-color: black;
     min-height: 100vh;
-    /* Ensure body takes the full viewport height */
+}
+
+.image {
+    background-size: cover;
 }
 
 
@@ -31,36 +30,30 @@ body {
 .main_title {
     color: white;
     text-shadow: 0 4px 8px black;
-    font-size: 2vw;
+    font-size: 4vw;
     white-space: nowrap;
-    /* Add some space from the top */
     margin-bottom: 20px;
-    /* Add space between title and container */
+    width: 100%;
 }
 
 
 /* Styling for the content container */
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px black;
     max-width: 600px;
     width: 100%;
     margin: 10px;
+    justify-content: center;
 }
-
-
-/* Styling for the h2 */
 
 h2 {
     margin-top: 0;
     color: black;
 }
-
-
-/* Styling for paragraphs */
 
 p {
     color: black;
@@ -68,9 +61,6 @@ p {
     font-size: 18px;
     margin-top: 10px;
 }
-
-
-/* Styling for strong elements (titles within paragraphs) */
 
 strong {
     font-size: 20px;

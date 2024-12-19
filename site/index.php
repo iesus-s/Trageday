@@ -3,8 +3,11 @@ include "db_conn.php";
 $accessKey = 'ly8i2THJhTEPlz5d5gyb6SkrBuWBsh0Fvf0caABuTo4';
 
 // Get today's month and day
+date_default_timezone_set('America/Los_Angeles');
 $currentMonth = date('F');   
-$currentDay = date('d') - 1;       
+$currentDay = date('d');       
+$imageDir = '../pic_uploads/';
+$imageName = 'background.jpg';
 
 // Fetch tragedies where the month and day match today's month and day
 $sql = "SELECT * FROM tragedies WHERE month = ? AND day = ?";
@@ -44,7 +47,7 @@ if ($result->num_rows > 0) {
             <link rel='stylesheet' type='text/css' href='../styles/style.css?v=1'> 
             <title>Trageday</title> 
         </head>
-        <body style='background-image: url(\"$imageUrl\");'>
+        <body class='image' style='background-image: url(\"$imageUrl\");'>
             <div class='main_title'>
                 <h1>TRAGEDAY . COM</h1>
             </div> 
