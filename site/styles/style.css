@@ -1,100 +1,77 @@
-/* Ensure that the body and html take up the full height of the page */
-
-html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-
-/* Use Flexbox to center the content */
-
-body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
     background-color: black;
-    min-height: 100vh;
-}
-
-.image {
     background-size: cover;
 }
 
-
-/* Styling for the title */
-
-.main_title {
-    color: white;
+.maintitle {
+    text-align: center;
     text-shadow: 0 4px 8px black;
-    font-size: 4vw;
-    white-space: nowrap;
+}
+
+.maintitle h1 {
+    font-size: 6vw;
+    color: white;
+    text-align: center;
+    text-shadow: 0 4px 8px black;
     margin-bottom: 20px;
-    width: 100%;
 }
 
-
-/* Styling for the content container */
-
-.container {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+.summary {
+    color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 8px;
-    box-shadow: 0 4px 8px black;
-    max-width: 600px;
-    width: 100%;
-    margin: 10px;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
-h2 {
-    margin-top: 0;
+.where {
     color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-p {
+.map {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.thoughts {
     color: black;
-    line-height: 1.5;
-    font-size: 18px;
-    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-strong {
-    font-size: 20px;
+.form {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-inside {
+    color: black;
+    margin-top: 20px;
+}
+
+.form-outside {
+    margin-bottom: 20px;
+}
+
+.posts {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.errorx {
+    color: red;
     font-weight: bold;
-}
-
-
-/* Responsive Design: Adjust layout and text size on smaller screens */
-
-@media (max-width: 768px) {
-    p {
-        font-size: 16px;
-    }
-    .container {
-        padding: 15px;
-        max-width: 90%;
-    }
-    strong {
-        font-size: 18px;
-    }
-}
-
-
-/* For mobile devices */
-
-@media (max-width: 480px) {
-    p {
-        font-size: 14px;
-    }
-    .container {
-        padding: 10px;
-        max-width: 100%;
-    }
-    strong {
-        font-size: 16px;
-    }
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
 }

@@ -1,52 +1,52 @@
-<?php
-    session_start();
-    include "../db_conn.php"; // ensure this file contains the database connection setup 
+<?php 
+include "../db_conn.php"; // Ensure this file contains the database connection setup
 
-    // function to sanitize user input
-    function validate($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
+// Function to sanitize user input
+function validate($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
-    if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) { 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // retrieve the user id and message
-            $m_id = $_SESSION['id'];
-            $m_user = $_SESSION['user_name'];
-            $message = validate($_POST['message']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve the user name and message
+    $name = validate($_POST['name']); 
+    $message = validate($_POST['message']);
 
-            // Ensure the message is not empty
-            if (!empty($message)) {
-                // prepare and execute the SQL statement (prevents sql injections)
-                $sql = "INSERT INTO messages (m_id, m_user, message) VALUES (?, ?, ?)"; 
-                $stmt = $conn->prepare($sql);
+    // Ensure the message is not empty
+    if (!empty($message)) {
+        // Prepare and execute the SQL statement (prevents SQL injections)
+        $sql = "INSERT INTO messages (name, message) VALUES (?, ?)"; 
+        $stmt = $conn->prepare($sql);
 
-                if ($stmt) {
-                    $stmt->bind_param("iss", $m_id, $m_user, $message);
+        if ($stmt) {
+            $stmt->bind_param("ss", $name, $message);
 
-                    // Execute the query and check for success
-                    if ($stmt->execute()) {
-                        header("Location: ../pages/forum.php");
-                        exit();
-                    } 
-                    else {
-                        echo "error occurred: " . $stmt->error;
-                    }
-                    $stmt->close();    
-                } 
-                else {
-                    echo "<h2>failed to send message: " . $stmt->error . "</h2>";
-                } 
+            // Execute the query and check for success
+            if ($stmt->execute()) {
+                header("Location: ../index.php?success=Message posted!");
+                exit();
             } else {
-                echo "<h2>message cannot be empty!</h2>";
+                // Log the error
+                error_log("Error executing statement: " . $stmt->error);
+                header("Location: ../index.php?error=Error posting message");
+                exit();
             }
+            $stmt->close();    
+        } else {
+            // Log the error
+            error_log("Error preparing statement: " . $conn->error);
+            header("Location: ../index.php?error=Error posting message");
+            exit();
         }
-    } 
-    else {
-        // redirect to login page if the user is not authenticated
-        header("Location: ./pages/forum.php");
+    } else {
+        header("Location: ../index.php?error=Message cannot be empty");
         exit();
-    } 
+    }
+} else {
+    // Redirect to the main page if the user is not authenticated
+    header("Location: ../index.php");
+    exit();
+}
 ?>
