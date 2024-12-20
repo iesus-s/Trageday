@@ -17,6 +17,7 @@ COPY site/ /var/www/html/
 
 # Set permissions for application files
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+RUN chmod 775 /var/www/html/pic_uploads && chown www-data:www-data /var/www/html/pic_uploads
 
 # Suppress Apache warning
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf

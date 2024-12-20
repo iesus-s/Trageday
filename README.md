@@ -16,3 +16,5 @@ phpAdmin: http://localhost:8081
 after creating the container, go into the apache container bash and execute the following command and restart container
 'docker-php-ext-install mysqli'
 
+## also go into phpadmin and manually import csv file to 'tragedies' table
+

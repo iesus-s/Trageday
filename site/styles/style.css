@@ -1,35 +1,87 @@
+/* INDEX.PHP STYLING BEGINS */
+
 body {
     background-color: black;
     background-size: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100vh;
 }
 
-.maintitle {
-    text-align: center;
-    text-shadow: 0 4px 8px black;
+.nav {
+    color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
 }
 
-.maintitle h1 {
-    font-size: 6vw;
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: black !important;
+}
+
+.thetitle {
     color: white;
     text-align: center;
-    text-shadow: 0 4px 8px black;
+    border-radius: 8px;
+    margin-top: 10px;
     margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    font-size: 8vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.t_title {
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    font-size: 6vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.background {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
 }
 
 .summary {
-    color: black;
+    color: white;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 8px;
     margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.summary2 {
+    color: white;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px black;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .where {
-    color: black;
+    color: white;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 8px;
     margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .map {
@@ -37,41 +89,138 @@ body {
     margin-bottom: 20px;
 }
 
+.frame {
+    height: 40vh;
+}
+
 .thoughts {
-    color: black;
+    color: white;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 8px;
     margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .form {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.75);
+    color: white;
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.form-inside {
-    color: black;
-    margin-top: 20px;
+.name {
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
 }
 
-.form-outside {
-    margin-bottom: 20px;
+.message {
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
+}
+
+.custom-btn {
+    color: white !important;
+    box-shadow: 0 4px 8px white;
+    border-radius: 8px;
+}
+
+.custom-btn:hover {
+    color: black !important;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
+}
+
+.messages {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    background-color: rgba(17, 17, 17, 0.75);
 }
 
 .posts {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.75);
+    color: white;
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 8px;
     margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.names {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
 }
 
 .errorx {
     color: red;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px black;
 }
+
+.successx {
+    color: blue;
+    font-weight: bold;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px black;
+}
+
+
+/*INDEX.PHP STYLING ENDS */
+
+
+/*ABOUTUS.PHP STYLING BEGINS */
+
+.who {
+    color: white;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*ABOUTUS.PHP STYLING ENDS */
+
+
+/*CONTACTUS.PHP STYLING BEGINS */
+
+.contact {
+    color: white;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contactform {
+    color: white;
+    text-align: left;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*CONTACTUS.PHP STYLING ENDS */

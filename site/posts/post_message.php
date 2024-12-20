@@ -1,5 +1,5 @@
 <?php 
-include "../db_conn.php"; // Ensure this file contains the database connection setup
+include "../db_conn.php";  
 
 // Function to sanitize user input
 function validate($data) {
