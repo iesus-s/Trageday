@@ -3,6 +3,12 @@ include "../db_conn.php";
 // Begin session for global variables
 session_start();
 
+// Set default values for session variables if not set
+$_SESSION['image'] = isset($_SESSION['image']) ? $_SESSION['image'] : '../pic_uploads/default.jpg';
+$_SESSION['month'] = isset($_SESSION['month']) ? $_SESSION['month'] : date('F');
+$_SESSION['day'] = isset($_SESSION['day']) ? $_SESSION['day'] : ltrim(date('d'), '0');
+$_SESSION['year'] = isset($_SESSION['year']) ? $_SESSION['year'] : date('Y');
+
 // Output the page content
 echo "<!DOCTYPE html>
 <html lang='en'>
@@ -12,20 +18,10 @@ echo "<!DOCTYPE html>
     <link rel='stylesheet' type='text/css' href='../styles/style.css?v=1'> 
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' 
     integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
-    <title>Trageday</title> 
-    <style>
-        /* Custom styles for the calendar table */
-        .calendar-table {
-            border-radius: 8px; /* Add border radius */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-            overflow: hidden; /* Ensures border radius is applied to corners */
-        }
-        .calendar td, .calendar th {
-            text-align: center;
-        }
-    </style>
+    <title>Trageday</title>  
 </head>";
 
+// Background & Navbar
 echo "<body class='image' style='background-image: url(" . $_SESSION['image'] . ");'> 
 <div class='container-fluid thetitle'>
     <h1 class='thetitle'><strong>T R A G E D A Y . C O M</strong></h1> 
@@ -40,6 +36,9 @@ echo "<body class='image' style='background-image: url(" . $_SESSION['image'] . 
         </li>
         <li class='nav-item'>
             <a class='nav-link' href='../pages/tragedies.php?'>Tragedies</a>
+        </li> 
+        <li class='nav-item'>
+            <a class='nav-link' href='/pages/currentevents.php?'>Current Tragedies</a>
         </li> 
         <li class='nav-item'>
             <a class='nav-link' href='../pages/aboutus.php'>About Us</a>
@@ -73,14 +72,14 @@ if ($next_month > 12) { $next_month = 1; }
 
 echo '<div class="container mt-5">
         <div class="row"> 
-            <a href="?month=' . $prev_month . '" class="col btn months">Previous Month</a>
+            <a href="?month=' . $prev_month . '" class="col btn months">&#8592</a>
             <h3 class="col text-center themonth">' . date('F', mktime(0, 0, 0, $month, 10)) . '</h3>
-            <a href="?month=' . $next_month . '" class="col btn ml-2 months">Next Month</a>
+            <a href="?month=' . $next_month . '" class="col btn ml-2 months">&#8594</a>
         </div>
     </div>
         <br>
-    <div class="row">
-        <div class="col calendar-border">
+    <div class="table-responsive">
+        <div class="col calendar-border-0">
             <table class="table table-bordered calendar-table">  <!-- Apply the new class here -->
                 <thead>
                     <tr>';

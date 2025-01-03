@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
             $imageUrl = '../pic_uploads/default.png'; // Fallback image if no result is found
         }   
 
-        $image = !empty($imageArray['results']) ? $imageArray['results'][0]['urls']['regular'] : '../pic_uploads/default.png'; 
+        $image = !empty($imageArray['results']) ? $imageArray['results'][0]['urls']['regular'] : '../pic_uploads/default.jpg'; 
 
         // Begin session for global variables
         session_start();
@@ -75,12 +75,18 @@ if ($result->num_rows > 0) {
                         <a class='nav-link' href='/pages/tragedies.php?'>Tragedies</a>
                     </li> 
                     <li class='nav-item'>
+                        <a class='nav-link' href='/pages/currentevents.php?'>Current Tragedies</a>
+                    </li> 
+                    <li class='nav-item'>
                         <a class='nav-link' href='/pages/aboutus.php'>About Us</a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link' href='/pages/contactus.php'>Contact Us</a>
                     </li> 
-                </ul>";
+                </ul>
+                <div class='container-sm alltragedies'>
+                    <h2>Today's Tragedy</h2>
+                </div>";
 
             // Trageday Title & Summary & Image
             echo "<div class='container-fluid t_title'>
