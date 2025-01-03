@@ -1,5 +1,7 @@
 <?php 
 include "../db_conn.php";  
+// Begin session for global variables
+session_start();
 
 // Function to sanitize user input
 function validate($data) {
@@ -13,19 +15,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the user name and message
     $name = validate($_POST['name']); 
     $message = validate($_POST['message']);
+    $trageday = validate($_SESSION['trageday']);
 
     // Ensure the message is not empty
     if (!empty($message)) {
         // Prepare and execute the SQL statement (prevents SQL injections)
-        $sql = "INSERT INTO messages (name, message) VALUES (?, ?)"; 
+        $sql = "INSERT INTO messages (name, message, trageday) VALUES (?, ?, ?)"; 
         $stmt = $conn->prepare($sql);
 
         if ($stmt) {
-            $stmt->bind_param("ss", $name, $message);
+            $stmt->bind_param("sss", $name, $message, $trageday);
 
             // Execute the query and check for success
             if ($stmt->execute()) {
-                header("Location: ../index.php?success=Message posted!");
+                header("Location: ../index.php?success=Message posted!#messagereturn");
                 exit();
             } else {
                 // Log the error

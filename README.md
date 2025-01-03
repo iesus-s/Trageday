@@ -18,3 +18,6 @@ after creating the container, go into the apache container bash and execute the 
 
 ## also go into phpadmin and manually import csv file to 'tragedies' table
 
+## in PHPmyAdmin fo to 'SQL' and enter your desire timezone
+'SET GLOBAL time_zone = 'America/Los_Angeles';'
+
