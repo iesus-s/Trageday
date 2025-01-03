@@ -17,12 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($stmt->execute()) {
         // Redirect with success message
-        header("Location: ../contactus.php?bg_image=" . $image . "&month=" . $month . 
-                        "&day=" . $day . "&year=" . $year . "");
+        header("Location: ../pages/contactus.php?success=Message sent!");
+        exit();
     } else {
         // Redirect with error message
-        header("Location: ./contactus.php?bg_image=" . $image . "&month=" . $month . 
-                        "&day=" . $day . "&year=" . $year . "");
+        header("Location: ../pages/contactus.php?error=Error sending message!");
+        exit();
     }
 
     $stmt->close();

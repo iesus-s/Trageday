@@ -3,9 +3,27 @@
 body {
     background-color: black;
     background-size: cover;
-    margin-left: 20px;
-    margin-right: 20px;
     height: 100vh;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+footer {
+    color: white;
+    text-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    flex-direction: column;
+    margin-top: auto;
+    padding: 40px 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
 .nav {
@@ -156,6 +174,11 @@ body {
     color: white;
 }
 
+.one {
+    justify-content: right;
+    text-align: right;
+}
+
 .errorx {
     color: red;
     font-weight: bold;
@@ -224,3 +247,86 @@ body {
 
 
 /*CONTACTUS.PHP STYLING ENDS */
+
+
+/*TRAGEDIES.PHP STYLING BEGINS */
+
+.alltragedies {
+    color: white;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.months {
+    color: white !important;
+    box-shadow: 0 4px 8px white;
+    border-radius: 8px;
+    background-color: rgba(17, 17, 17, 0.75)!important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif!important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.months:hover {
+    color: black !important;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
+}
+
+.themonth {
+    color: white;
+    text-align: center;
+    text-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.calendar-table {
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.calendar-border {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.calendar td,
+.calendar th {
+    text-align: center;
+}
+
+.calendar-days {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.75)!important;
+    color: white!important;
+    border: 2px solid white;
+}
+
+.calendar {
+    background-color: rgba(17, 17, 17, 0.75)!important;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.calendar a {
+    text-decoration: none;
+    color: white!important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem!important;
+}
+
+.calendar a:hover {
+    color: black!important;
+}
