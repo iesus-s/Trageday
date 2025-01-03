@@ -6,8 +6,25 @@ body {
     height: 100vh;
     margin-bottom: 50px;
     padding-bottom: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
+    opacity: 0;
+    animation: fadeIn .75s ease-in-out forwards;
+    transition: opacity 1s ease-in-out;
+    padding: 0 5vw;
+    /* Adjust padding to create space on the sides */
+    box-sizing: border-box;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 footer {
@@ -35,6 +52,7 @@ footer a {
 
 .nav-link {
     color: white !important;
+    text-shadow: 0 4px 8px black;
 }
 
 .nav-link:hover {
@@ -43,13 +61,14 @@ footer a {
 
 .thetitle {
     color: white;
-    text-align: center;
+    justify-content: center;
+    display: flex;
     border-radius: 8px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-shadow: 0 4px 8px black;
-    font-size: 8vw;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 6vw;
 }
 
 .t_title {
@@ -268,7 +287,6 @@ footer a {
     box-shadow: 0 4px 8px white;
     border-radius: 8px;
     background-color: rgba(17, 17, 17, 0.75)!important;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif!important;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -287,7 +305,7 @@ footer a {
 }
 
 .calendar-table {
-    border-radius: 8px;
+    border-radius: 2px;
     overflow: hidden;
     font-size: 0.8rem;
     width: 80%;
@@ -295,14 +313,17 @@ footer a {
     border: 2px solid black;
 }
 
-.calendar-border {
+.calendar-border-0 {
     margin-left: 10px;
     margin-right: 10px;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
 }
 
 .calendar td,
 .calendar th {
     text-align: center;
+    box-shadow: 0 4px 8px black;
 }
 
 .calendar-days {
@@ -312,12 +333,15 @@ footer a {
     background-color: rgba(17, 17, 17, 0.75)!important;
     color: white!important;
     border: 2px solid white;
+    border-radius: 8px;
 }
 
 .calendar {
     background-color: rgba(17, 17, 17, 0.75)!important;
     text-align: center;
     border: 2px solid white;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
 }
 
 .calendar a {
@@ -329,4 +353,43 @@ footer a {
 
 .calendar a:hover {
     color: black!important;
+}
+
+
+/*TRAGEDIES.PHP STYLING ENDS */
+
+
+/*CONTACTUS.PHP STYLING ENDS */
+
+.ct_title {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ct_summary {
+    font-size: 1rem;
+}
+
+.ct_image {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+}
+
+.ct_readmore {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white !important;
+    box-shadow: 0 4px 8px white;
+    border-radius: 8px;
+}
+
+.ct_readmore:hover {
+    color: black !important;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
 }

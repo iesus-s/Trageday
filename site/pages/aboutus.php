@@ -3,6 +3,12 @@ include "../db_conn.php";
 // Begin session for global variables
 session_start();
 
+// Set default values for session variables if not set
+$_SESSION['image'] = isset($_SESSION['image']) ? $_SESSION['image'] : '../pic_uploads/default.jpg';
+$_SESSION['month'] = isset($_SESSION['month']) ? $_SESSION['month'] : date('F');
+$_SESSION['day'] = isset($_SESSION['day']) ? $_SESSION['day'] : ltrim(date('d'), '0');
+$_SESSION['year'] = isset($_SESSION['year']) ? $_SESSION['year'] : date('Y');
+
 // Output the page content
 // HTML Header
 echo "<!DOCTYPE html>
@@ -29,6 +35,9 @@ echo "<!DOCTYPE html>
         </li>
         <li class='nav-item'>
             <a class='nav-link' href='tragedies.php'>Tragedies</a>
+        </li> 
+        <li class='nav-item'>
+            <a class='nav-link' href='/pages/currentevents.php?'>Current Tragedies</a>
         </li> 
         <li class='nav-item'>
             <a class='nav-link' href='#'>About Us</a>
