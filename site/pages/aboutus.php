@@ -40,6 +40,9 @@ echo "<!DOCTYPE html>
             <a class='nav-link' href='/pages/currentevents.php?'>Current Tragedies</a>
         </li> 
         <li class='nav-item'>
+            <a class='nav-link' href='../pages/blappy.php'>Blappy Fird</a>
+        </li> 
+        <li class='nav-item'>
             <a class='nav-link' href='#'>About Us</a>
         </li>
         <li class='nav-item'>

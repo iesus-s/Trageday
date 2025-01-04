@@ -359,7 +359,7 @@ footer a {
 /*TRAGEDIES.PHP STYLING ENDS */
 
 
-/*CONTACTUS.PHP STYLING ENDS */
+/*CURRENT TRAGEDIES STYLING BEGINS */
 
 .ct_title {
     color: white;
@@ -390,6 +390,23 @@ footer a {
 
 .ct_readmore:hover {
     color: black !important;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
+}
+
+
+/*CURRENT TRAGEDIES STYLING ENDS */
+
+
+/*BLAPPY STYLING BEGINS */
+
+.game {
+    justify-content: center;
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid black;
     box-shadow: 0 4px 8px black;
     border-radius: 8px;
 }

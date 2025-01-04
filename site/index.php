@@ -72,10 +72,13 @@ if ($result->num_rows > 0) {
                         <a class='nav-link active' aria-current='page' href='index.php'>Home</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='/pages/tragedies.php?'>Tragedies</a>
+                        <a class='nav-link' href='/pages/tragedies.php'>Tragedies</a>
                     </li> 
                     <li class='nav-item'>
-                        <a class='nav-link' href='/pages/currentevents.php?'>Current Tragedies</a>
+                        <a class='nav-link' href='/pages/currentevents.php'>Current Tragedies</a>
+                    </li> 
+                    <li class='nav-item'>
+                        <a class='nav-link' href='/pages/blappy.php'>Blappy Fird</a>
                     </li> 
                     <li class='nav-item'>
                         <a class='nav-link' href='/pages/aboutus.php'>About Us</a>

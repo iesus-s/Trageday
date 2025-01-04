@@ -85,6 +85,9 @@ echo "<body class='image' style='background-image: url(" . $_SESSION['image'] . 
             <a class='nav-link' href='/pages/currentevents.php?'>Current Tragedies</a>
         </li> 
         <li class='nav-item'>
+            <a class='nav-link' href='../pages/blappy.php'>Blappy Fird</a>
+        </li> 
+        <li class='nav-item'>
             <a class='nav-link' href='../pages/aboutus.php'>About Us</a>
         </li>
         <li class='nav-item'>
