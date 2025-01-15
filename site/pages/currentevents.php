@@ -74,7 +74,7 @@ echo "<body class='image' style='background-image: url(" . $_SESSION['image'] . 
     <h2 class='dater'>" . $_SESSION['month'] . " " . $_SESSION['day'] . ", 
     " . $_SESSION['year'] . "</h2>
 </div> 
-    <ul class='nav'>
+    <ul class='nav container-sm'>
         <li class='nav-item'>
             <a class='nav-link active' href='../index.php'>Home</a>
         </li>
@@ -86,6 +86,9 @@ echo "<body class='image' style='background-image: url(" . $_SESSION['image'] . 
         </li> 
         <li class='nav-item'>
             <a class='nav-link' href='../pages/blappy.php'>Blappy Fird</a>
+        </li>
+        <li class='nav-item'>
+            <a class='nav-link' href='../pages/shnake.php'>Shnake</a>
         </li> 
         <li class='nav-item'>
             <a class='nav-link' href='../pages/aboutus.php'>About Us</a>
