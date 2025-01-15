@@ -48,6 +48,9 @@ footer a {
     font-size: 1rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     justify-content: center;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
 }
 
 .nav-link {
@@ -409,4 +412,38 @@ canvas {
     border: 2px solid black;
     box-shadow: 0 4px 8px black;
     border-radius: 8px;
+}
+
+
+/* SHNAKE STYLING BEGIN */
+
+.custom-btnx {
+    color: white !important;
+    box-shadow: 0 4px 8px white;
+    border-radius: 8px;
+    background-color: rgba(17, 17, 17, 0.75)!important;
+    width: 5rem;
+    height: 5rem;
+}
+
+.custom-btnx:hover {
+    color: black !important;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
+}
+
+.topscore {
+    color: white;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.75);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.score {
+    font-size: large;
 }

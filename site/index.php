@@ -67,7 +67,7 @@ if ($result->num_rows > 0) {
                 <h2 class='dater'>" . $_SESSION['month'] . " " . $_SESSION['day'] . ", 
                 " . $_SESSION['year'] . "</h2>
             </div> 
-                <ul class='nav'>
+                <ul class='nav container-sm'>
                     <li class='nav-item'>
                         <a class='nav-link active' aria-current='page' href='index.php'>Home</a>
                     </li>
@@ -79,6 +79,9 @@ if ($result->num_rows > 0) {
                     </li> 
                     <li class='nav-item'>
                         <a class='nav-link' href='/pages/blappy.php'>Blappy Fird</a>
+                    </li> 
+                    <li class='nav-item'>
+                        <a class='nav-link' href='/pages/shnake.php'>Shnake</a>
                     </li> 
                     <li class='nav-item'>
                         <a class='nav-link' href='/pages/aboutus.php'>About Us</a>
